@@ -1,6 +1,13 @@
-import fun from '../index';
+import { sortObj } from '../index';
 
-test('test..', () => {
-  const fum = fun();
-  expect(fum).toBe(4);
+test('two objects with a list of heroes', () => {
+  const result = sortObj();
+  const standartObj = {
+    listHeroesObj: [
+      { name: 'маг', health: 100 },
+      { name: 'лучник', health: 80 },
+      { name: 'мечник', health: 10 },
+    ],
+  };
+  expect(result).toEqual(standartObj);
 });
